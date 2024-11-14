@@ -199,7 +199,7 @@
     </style>
 </head>
 <body>
-
+<?= $this->include('layouts/navbar') ?> <!-- Load navbar layout -->
 <!-- HEADER: MENU + HEROE SECTION -->
 <header>
 
