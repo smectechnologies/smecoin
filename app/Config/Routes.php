@@ -12,3 +12,4 @@ $routes->get('register', 'RegistrationController::index');  // Register page
 $routes->post('register', 'RegistrationController::authenticate');  // Registration form submission
 $routes->get('/dashboard', 'DashboardController::index'); //dashboard 
 $routes->get('/logout', 'LogoutController::index');//logout
+$routes->get('/EarnCoins', 'EarnCoinsController::index');//Earn coins

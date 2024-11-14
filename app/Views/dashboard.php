@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard</title>
 
-    <!-- Fontfaces CSS -->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/font-awesome-4.7/css/font-awesome.min.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/font-awesome-5/css/fontawesome-all.min.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/mdi-font/css/material-design-iconic-font.min.css') ?>" rel="stylesheet" media="all">
+<?= $this->include('layouts/dash-header') ?> <!-- Load Dash Header -->
 
-    <!-- Bootstrap 4.1 CSS -->
-    <link href="<?= base_url('assets/vendor/bootstrap-4.1/bootstrap.min.css') ?>" rel="stylesheet" media="all">
-
-    <!-- Vendor CSS -->
-    <link href="<?= base_url('assets/vendor/animsition/animsition.min.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/wow/animate.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/css-hamburgers/hamburgers.min.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/slick/slick.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/select2/select2.min.css') ?>" rel="stylesheet" media="all">
-    <link href="<?= base_url('assets/vendor/perfect-scrollbar/perfect-scrollbar.css') ?>" rel="stylesheet" media="all">
-
-    <!-- Main CSS -->
-    <link href="<?= base_url('assets/css/theme.css') ?>" rel="stylesheet" media="all">
-
-    <!-- Custom CSS for Z-index -->
-    <style>
-        
-
-        .modal {
-            z-index: 9999 !important; /* Make sure modal appears above the backdrop */
-        }
-    </style>
-</head>
 
 <body class="animsition">
     <div class="page-wrapper">
@@ -76,8 +41,8 @@
                                 <i class="far fa-check-square"></i>Withdraw</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                            <a href="<?= base_url('EarnCoins') ?>">
+                                <i class="fas fa-calendar-alt"></i>Earn Coins</a>
                         </li>
                         
                        
@@ -115,8 +80,8 @@
                                 <i class="far fa-check-square"></i>Withdraw</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        <a href="<?= base_url('EarnCoins') ?>">
+                                <i class="fas fa-calendar-alt"></i>Earn Coins</a>
                         </li>
                         
                     </ul>
@@ -180,47 +145,12 @@
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h2 class="title-1">Overview</h2>
-                                    <button class="au-btn au-btn-icon au-btn--blue" data-toggle="modal" data-target="#addItemModal">
-                                        <i class="zmdi zmdi-plus"></i> Add Item
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Add Item Modal -->
-                        <div class="modal fade" id="addItemModal"  role="dialog" aria-labelledby="addItemModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="addItemModalLabel">Add New Item</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form id="addItemForm" enctype="multipart/form-data">
-                                            <div class="form-group">
-                                                <label for="date">Date</label>
-                                                <input type="date" class="form-control" id="date" name="date" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="postHeading">Post Heading</label>
-                                                <input type="text" class="form-control" id="postHeading" name="postHeading" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="totalViews">Total Views</label>
-                                                <input type="number" class="form-control" id="totalViews" name="totalViews" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="screenshot">Screenshot</label>
-                                                <input type="file" class="form-control" id="screenshot" name="screenshot" accept="image/*" required>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                         
                         <div class="row m-t-25">
                             <div class="col-sm-6 col-lg-3">
@@ -385,28 +315,5 @@
     </div>
 
    
+    <?= $this->include('layouts/dash-footer') ?> <!-- Load Dash Header -->
 
-    <!-- jQuery and Bootstrap 4.1 JS -->
-    <script src="<?= base_url('assets/vendor/jquery-3.2.1.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/bootstrap-4.1/popper.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/bootstrap-4.1/bootstrap.min.js') ?>"></script>
-
-    <!-- Additional JS Libraries -->
-    <script src="<?= base_url('assets/vendor/slick/slick.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/wow/wow.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/animsition/animsition.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/counter-up/jquery.waypoints.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/counter-up/jquery.counterup.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/circle-progress/circle-progress.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/perfect-scrollbar/perfect-scrollbar.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/chartjs/Chart.bundle.min.js') ?>"></script>
-    <script src="<?= base_url('assets/vendor/select2/select2.min.js') ?>"></script>
-
-    <!-- Main JS -->
-    <script src="<?= base_url('assets/js/main.js') ?>"></script>
-
-    <!-- Custom JS for Modal Initialization and Cleanup -->
-    
-</body>
-</html>
